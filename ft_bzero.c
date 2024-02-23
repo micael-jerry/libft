@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 19:06:17 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/02/20 20:34:33 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/02/23 18:58:26 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	ft_bzero(void *ptr, size_t n)
 {
-	int		*ptr_trans;
+	char	*ptr_trans;
 	size_t	i;
 
-	ptr_trans = (int *)ptr;
+	ptr_trans = (char *)ptr;
 	i = 0;
 	while (i < n)
 	{
