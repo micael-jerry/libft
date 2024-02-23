@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 14:44:22 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/02/20 21:29:40 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/02/23 18:55:22 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 void	*ft_memset(void *pointer, int value, size_t size)
 {
-	int		*pointer_temp;
+	char	*pointer_temp;
 	size_t	i;
 
 	if (!pointer)
 		return (NULL);
-	pointer_temp = (int *)pointer;
+	pointer_temp = (char *)pointer;
 	i = 0;
 	while (i < size)
 	{
-		pointer_temp[i] = value;
+		pointer_temp[i] = (char) value;
 		i++;
 	}
 	return (pointer);
