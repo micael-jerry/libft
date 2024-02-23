@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 21:41:23 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/02/23 10:54:18 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/02/23 19:28:29 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 static int	is_ignored_chr(char c)
 {
-	if (c == ' ' || c == '\t' || c == '\n' || c == '\r')
+	if (c == ' ' || c == '\t' || c == '\n' || c == '\r' || c == '\v'
+		|| c == '\f')
 		return (1);
 	return (0);
 }
