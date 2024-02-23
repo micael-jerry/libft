@@ -6,60 +6,83 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 21:52:41 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/02/23 22:03:01 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/02/23 23:37:45 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdlib.h>
 #include <string.h>
-#include "libft.h"
 
-static size_t	len_str_without_set(const char *s1, const char *set)
+typedef struct str_trim_info
 {
-	size_t	set_count;
-	size_t	i;
-	size_t	set_len;
+	int					start;
+	int					end;
+	size_t				len;
+}						str_trim_info;
+
+static int	is_set(const char c, const char *set)
+{
+	int	i;
+
+	i = 0;
+	while (set[i] != '\0')
+	{
+		if (set[i] == c)
+			return (1);
+		i++;
+	}
+	return (0);
+}
+
+static str_trim_info	str_trim_result_len(const char *s1, const char *set)
+{
+	size_t			set_count;
+	size_t			i;
+	size_t			j;
+	str_trim_info	trim_info;
 
 	set_count = 0;
 	i = 0;
-	set_len = strlen(set);
 	while (s1[i] != '\0')
 	{
-		if (strncmp(&s1[i], set, set_len) == 0)
-		{
+		if (is_set(s1[i], set))
 			set_count++;
-			i = i + set_len;
-		}
 		else
-			i++;
+			break ;
+		i++;
 	}
-	return (strlen(s1) - ((strlen(set) * set_count)));
+	trim_info.start = i;
+	j = strlen(s1) - 1;
+	while (j > i)
+	{
+		if (is_set(s1[j], set))
+			set_count++;
+		else
+			break ;
+		j--;
+	}
+	trim_info.end = j;
+	trim_info.len = strlen(s1) - set_count;
+	return (trim_info);
 }
 
-char	*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(const char *s1, const char *set)
 {
-	char	*str_trim;
-	size_t	len_str_trim;
-	int		i;
-	int		j;
+	char			*result;
+	int				i;
+	str_trim_info	info;
 
-	len_str_trim = len_str_without_set(s1, set);
-	str_trim = (char *) malloc(sizeof(char) * (len_str_trim + 1));
-	if (str_trim == NULL)
+	info = str_trim_result_len(s1, set);
+	result = (char *)malloc(sizeof(char) * (info.len + 1));
+	if (result == NULL)
 		return (NULL);
 	i = 0;
-	j = 0;
-	while (j < (int) len_str_trim)
+	while (i <= info.end)
 	{
-		if (strncmp(&s1[i], set, strlen(set)))
-		{
-			str_trim[j] = s1[i];
-			i++;
-			j++;
-		}
-		else
-			i = i + strlen(set);
+		result[i] = s1[info.start + i];
+		i++;
 	}
-	str_trim[j] = '\0';
-	return (str_trim);
+	result[i] = '\0';
+	return (result);
 }
