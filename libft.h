@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 13:40:17 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/02/24 12:02:02 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/02/24 17:07:27 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,12 @@ typedef struct t_str_trim_info
 	size_t				start;
 	size_t				end;
 }						t_str_trim_info;
+
+typedef struct t_ft_itoa_int_info
+{
+	size_t					intlen;
+	int						is_positive;
+	int						absolute_value;
+}							t_ft_itoa_int_info;
 
 #endif

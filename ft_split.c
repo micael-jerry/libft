@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 14:51:31 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/02/24 11:21:04 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/02/24 17:09:20 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static size_t	result_size(const char *str, char sep)
 	return (size);
 }
 
-void	copy(char *dest, const char *src, char sep)
+static void	copy(char *dest, const char *src, char sep)
 {
 	int	i;
 
@@ -50,7 +50,7 @@ void	copy(char *dest, const char *src, char sep)
 	dest[i] = '\0';
 }
 
-void	split(char **array, const char *str, char sep)
+static void	split(char **array, const char *str, char sep)
 {
 	int	i;
 	int	j;

@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/24 12:01:01 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/02/24 13:43:19 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/02/24 17:08:22 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,7 @@
 #include <stdlib.h>
 #define INT_MIN_VALUE -2147483648
 
-typedef struct s_ft_itoa_int_info
-{
-	size_t					intlen;
-	int						is_positive;
-	int						absolute_value;
-}							t_ft_itoa_int_info;
-
-size_t	ft_intlen(int n)
+static size_t	ft_intlen(int n)
 {
 	size_t	len;
 
@@ -54,7 +47,7 @@ static t_ft_itoa_int_info	get_info(int n)
 	return (info);
 }
 
-void	ft_itoa_operation(t_ft_itoa_int_info info, size_t len, char *result)
+static void	ft_itoa_operation(t_ft_itoa_int_info info, size_t len, char *result)
 {
 	int	i;
 
