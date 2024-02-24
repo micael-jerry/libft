@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 13:40:17 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/02/24 18:02:56 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/02/24 18:09:41 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
 typedef struct t_str_trim_info
