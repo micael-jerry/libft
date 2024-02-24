@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 14:51:31 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/02/23 18:06:45 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/02/24 11:21:04 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,6 @@ char	**ft_split(const char *str, char sep)
 	if (result == NULL)
 		return (NULL);
 	split(result, str, sep);
-	result[size] = '\0';
+	result[size] = NULL;
 	return (result);
 }
