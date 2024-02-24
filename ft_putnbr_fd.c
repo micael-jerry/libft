@@ -6,25 +6,30 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/24 17:37:13 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/02/24 17:59:08 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/02/24 18:24:45 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
+#include <unistd.h>
 
-static void	ft_putchr_fd(char c, int fd)
+static void	ft_putnbr_min_value_fd(int fd)
 {
-	write(fd, &c, 1);
+	ft_putstr_fd("-2147483648", fd);
 }
 
 void	ft_putnbr_fd(int n, int fd)
 {
 	int	nb;
 
+	if (n == INT_MIN_VALUE)
+	{
+		ft_putnbr_min_value_fd(fd);
+		return ;
+	}
 	if (n < 0)
 	{
-		ft_putchr_fd('-', fd);
+		ft_putchar_fd('-', fd);
 		nb = -n;
 	}
 	else
@@ -34,5 +39,5 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd(nb / 10, fd);
 		nb = nb % 10;
 	}
-	ft_putchr_fd(nb + '0', fd);
+	ft_putchar_fd(nb + '0', fd);
 }

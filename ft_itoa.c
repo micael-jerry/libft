@@ -6,13 +6,12 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/24 12:01:01 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/02/24 17:08:22 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/02/24 18:23:19 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
-#define INT_MIN_VALUE -2147483648
 
 static size_t	ft_intlen(int n)
 {
