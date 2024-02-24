@@ -6,18 +6,12 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 21:52:41 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/02/24 09:46:51 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/02/24 11:01:33 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
-
-typedef struct t_str_trim_info
-{
-	size_t				start;
-	size_t				end;
-}						t_str_trim_info;
 
 static int	is_set(const char c, const char *set)
 {
