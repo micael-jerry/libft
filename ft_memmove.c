@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 06:52:44 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/02/23 19:03:54 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/02/25 19:34:40 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,14 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t size)
 {
-	int	*dest_trans;
-	int	*src_trans;
-	int	i;
+	char	*dest_trans;
+	char	*src_trans;
+	int		i;
 
 	if (dest == src || size == 0)
-	{
 		return (dest);
-	}
-	dest_trans = (int *)dest;
-	src_trans = (int *)src;
+	dest_trans = (char *)dest;
+	src_trans = (char *)src;
 	if (dest_trans > src_trans && (dest_trans - src_trans) < (int)size)
 	{
 		i = size - 1;
