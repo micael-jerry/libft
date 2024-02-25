@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 13:40:17 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/02/25 11:44:25 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/02/25 12:34:15 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,28 @@
 # define INT_MIN_VALUE -2147483648
 
 # include <unistd.h>
+# include <stdlib.h>
 
+typedef struct s_str_trim_info
+{
+	size_t			start;
+	size_t			end;
+}					t_str_trim_info;
+
+typedef struct s_ft_itoa_int_info
+{
+	size_t			intlen;
+	int				is_positive;
+	int				absolute_value;
+}					t_ft_itoa_int_info;
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
+
+// LIBC
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);
 int					ft_isalnum(int c);
@@ -40,6 +61,7 @@ char				*ft_strnstr(const char *big, const char *little,
 int					ft_atoi(const char *str);
 void				*ft_calloc(size_t n, size_t size);
 char				*ft_strdup(const char *str);
+// ADDITIONAL
 char				*ft_substr(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s1, char const *set);
@@ -51,27 +73,7 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
-
-typedef struct s_str_trim_info
-{
-	size_t			start;
-	size_t			end;
-}					t_str_trim_info;
-
-typedef struct s_ft_itoa_int_info
-{
-	size_t			intlen;
-	int				is_positive;
-	int				absolute_value;
-}					t_ft_itoa_int_info;
-
 // BONUS
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}					t_list;
-
-t_list	*ft_lstnew(void *content);
+t_list				*ft_lstnew(void *content);
 
 #endif

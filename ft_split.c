@@ -6,12 +6,11 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 14:51:31 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/02/24 17:09:20 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/02/25 12:31:18 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static int	is_separator(char chr, char sep)
 {

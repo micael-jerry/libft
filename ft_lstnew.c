@@ -6,12 +6,11 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/25 11:43:22 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/02/25 12:24:45 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/02/25 12:31:13 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 t_list	*ft_lstnew(void *content)
 {

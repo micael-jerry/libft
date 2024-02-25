@@ -6,11 +6,10 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 21:08:33 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/02/23 10:54:37 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/02/25 12:31:22 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strdup(const char *str)

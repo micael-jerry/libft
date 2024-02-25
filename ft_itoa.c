@@ -6,12 +6,11 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/24 12:01:01 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/02/24 18:23:19 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/02/25 12:31:06 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static size_t	ft_intlen(int n)
 {

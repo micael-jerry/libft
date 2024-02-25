@@ -6,12 +6,11 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/24 17:37:13 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/02/24 18:24:45 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/02/25 12:30:36 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
 static void	ft_putnbr_min_value_fd(int fd)
 {

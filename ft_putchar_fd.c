@@ -6,11 +6,10 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/24 18:02:08 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/02/24 18:03:45 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/02/25 12:30:22 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)

@@ -6,12 +6,11 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 21:52:41 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/02/24 11:01:33 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/02/25 12:31:37 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static int	is_set(const char c, const char *set)
 {
