@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 13:40:17 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/02/25 15:24:01 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/02/25 16:21:23 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,5 +76,6 @@ void				ft_putnbr_fd(int n, int fd);
 // BONUS
 t_list				*ft_lstnew(void *content);
 void				ft_lstadd_front(t_list **lst, t_list *new);
+int					ft_lstsize(t_list *lst);
 
 #endif
