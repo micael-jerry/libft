@@ -9,6 +9,9 @@ SOURCES = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_st
 	ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 OBJECTS = $(SOURCES:.c=.o)
 
+SOURCES_BONUS = ft_lstnew.c
+OBJECTS_BONUS = $(SOURCES_BONUS:.c=.o)
+
 all: $(NAME)
 
 %.o: %.c
@@ -16,6 +19,9 @@ all: $(NAME)
 
 $(NAME): $(OBJECTS)
 	ar rc $(NAME) $(OBJECTS)
+
+bonus: $(OBJECTS) $(OBJECTS_BONUS)
+	ar rc $(NAME) $(OBJECTS) $(OBJECTS_BONUS)
 
 clean:
 	rm -rf $(wildcard *.o)
