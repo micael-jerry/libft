@@ -27,7 +27,7 @@ bonus: $(OBJECTS) $(OBJECTS_BONUS)
 clean:
 	rm -rf $(wildcard *.o)
 
-fclean:
+fclean: clean
 	rm -rf $(NAME)
 
 proper: clean fclean
