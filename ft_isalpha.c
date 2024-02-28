@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 13:39:38 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/02/23 18:45:41 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/02/28 18:45:04 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_isalpha(int c)
 {
-	if (((char) c >= 'a' && (char) c <= 'z'))
+	if (c >= 'a' && c <= 'z')
 		return (1);
-	if ((char) c >= 'A' && (char) c <= 'Z')
+	if (c >= 'A' && c <= 'Z')
 		return (1);
 	return (0);
 }
