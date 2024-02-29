@@ -6,11 +6,9 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 21:09:32 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/02/23 10:55:25 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/02/29 12:13:14 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-// changer en fonction du libft: strncmp -> ft_strcmp
 
 #include "libft.h"
 #include <string.h>
@@ -21,14 +19,17 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	big_len;
 	size_t	little_len;
 
-	i = 0;
-	big_len = ft_strlen(big);
 	little_len = ft_strlen(little);
-	if (big_len < little_len || len < little_len)
+	big_len = ft_strlen(big);
+	if ((little_len == 0 && big_len == 0) || (big_len > 0 && little_len == 0
+			&& len == 0))
+		return ((char *)&big[0]);
+	if (!big || !little || big_len < little_len || len < little_len)
 		return (NULL);
-	while ((i + little_len) < len)
+	i = 0;
+	while ((i + little_len) <= len)
 	{
-		if (strncmp(&big[i], little, little_len) == 0)
+		if (ft_strncmp(&big[i], little, little_len) == 0)
 			return ((char *)&big[i]);
 		i++;
 	}

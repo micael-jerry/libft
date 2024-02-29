@@ -21,7 +21,7 @@ void	*ft_memset(void *pointer, int value, size_t size)
 	i = 0;
 	while (i < size)
 	{
-		pointer_temp[i] = (char) value;
+		pointer_temp[i] = (char)value;
 		i++;
 	}
 	return (pointer);

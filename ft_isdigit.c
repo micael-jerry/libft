@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 13:39:49 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/02/23 18:22:31 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/02/29 10:35:50 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isdigit(int c)
 {
-	if ((char)c >= '0' && (char)c <= '9')
+	if (c >= '0' && c <= '9')
 		return (1);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/24 12:01:01 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/02/25 12:31:06 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/02/29 15:09:04 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ char	*ft_itoa(int n)
 	char				*result;
 
 	if (n == INT_MIN_VALUE)
-		return ("-2147483648");
+		return (ft_strdup("-2147483648"));
 	info = get_info(n);
 	len = info.intlen + !info.is_positive;
 	result = (char *)malloc(sizeof(char) * (len + 1));
