@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/25 16:55:43 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/02/25 17:34:00 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/03/06 14:41:27 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		lst[0] = new;
 		return ;
 	}
-	actual_last_element = ft_lstlast(*lst);
+	actual_last_element = ft_lstlast(lst[0]);
 	actual_last_element->next = new;
 }

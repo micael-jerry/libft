@@ -6,14 +6,13 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 13:40:17 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/03/04 18:13:15 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/03/06 16:15:58 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # define INT_MIN_VALUE -2147483648
-# define UNSIGNED_INT_MAX_VALUE 4294967295
 
 # include <stdlib.h>
 # include <unistd.h>
