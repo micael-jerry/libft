@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 19:43:07 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/02/29 14:38:59 by mfidimal         ###   ########.fr       */
+/*   Updated: 2024/03/14 18:43:14 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t size)
 {
-	char	*dest_trans;
-	char	*src_trans;
-	size_t	i;
+	unsigned char		*result;
+	const unsigned char	*source;
+	size_t				i;
 
-	if (!dest || !src)
-		return (NULL);
-	dest_trans = (char *)dest;
-	src_trans = (char *)src;
+	result = dest;
+	source = src;
 	i = 0;
+	if (dest == src || !size)
+		return (dest);
 	while (i < size)
 	{
-		dest_trans[i] = src_trans[i];
+		result[i] = source[i];
 		i++;
 	}
 	return (dest);
