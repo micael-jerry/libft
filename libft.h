@@ -6,13 +6,14 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 13:40:17 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/03/12 10:43:16 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/02/01 09:53:36 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # define INT_MIN_VALUE -2147483648
+# define INT_MAX_VALUE 2147483647
 
 # include <stdlib.h>
 # include <unistd.h>
@@ -58,7 +59,7 @@ void				*ft_memchr(const void *mem_block, int chr, size_t size);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 char				*ft_strnstr(const char *big, const char *little,
 						size_t len);
-int					ft_atoi(const char *str);
+long				ft_atoi(const char *str);
 void				*ft_calloc(size_t n, size_t size);
 char				*ft_strdup(const char *str);
 // ADDITIONAL
@@ -84,5 +85,13 @@ void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
+// MATRIX
+size_t				ft_matrixsize(void **arr);
+void				ft_matrixfree(void **arr);
+
+// BINARY
+char				*char_to_binary_str(unsigned char c);
+char				*str_to_binary_str(char *str);
+char				binary_to_char(char *binary);
 
 #endif

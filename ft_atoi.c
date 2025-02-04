@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 21:41:23 by mfidimal          #+#    #+#             */
-/*   Updated: 2024/02/23 19:28:29 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/01/09 17:13:08 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,15 +27,15 @@ static int	get_sign(char c)
 	return (1);
 }
 
-int	ft_atoi(const char *str)
+long	ft_atoi(const char *str)
 {
-	int	res;
-	int	sign;
-	int	i;
+	long	i;
+	long	res;
+	int		sign;
 
+	i = 0;
 	res = 0;
 	sign = 1;
-	i = 0;
 	while (str[i] != '\0')
 	{
 		if (ft_isdigit(str[i]))
