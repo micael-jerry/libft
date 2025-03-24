@@ -13,7 +13,7 @@
 #ifndef BINARY_LIBFT_H
 # define BINARY_LIBFT_H
 
-#include "str_libft.h"
+# include "str_libft.h"
 
 char	*char_to_binary_str(unsigned char c);
 char	*str_to_binary_str(char *str);
