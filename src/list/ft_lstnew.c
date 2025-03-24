@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/24 08:34:46 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/03/24 08:39:33 by mfidimal         ###   ########.fr       */
+/*   Created: 2024/02/25 11:43:22 by mfidimal          #+#    #+#             */
+/*   Updated: 2025/03/24 08:14:44 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-#define LIBFT_H
-
-#include "char_libft.h"
 #include "list_libft.h"
-#include "memory_libft.h"
-#include "num_libft.h"
-#include "print_libft_.h"
-#include "str_libft.h"
-#include "matrix_libft.h"
 
-#endif
+t_list	*ft_lstnew(void *content)
+{
+	t_list	*lstnew;
+
+	lstnew = (t_list *)malloc(sizeof(t_list));
+	if (!lstnew)
+		return (NULL);
+	lstnew->content = content;
+	lstnew->next = NULL;
+	return (lstnew);
+}

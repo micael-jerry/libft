@@ -1,24 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/24 08:34:46 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/03/24 08:39:33 by mfidimal         ###   ########.fr       */
+/*   Created: 2024/02/25 15:22:52 by mfidimal          #+#    #+#             */
+/*   Updated: 2025/03/24 08:11:03 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-#define LIBFT_H
-
-#include "char_libft.h"
 #include "list_libft.h"
-#include "memory_libft.h"
-#include "num_libft.h"
-#include "print_libft_.h"
-#include "str_libft.h"
-#include "matrix_libft.h"
 
-#endif
+void	ft_lstadd_front(t_list **lst, t_list *new)
+{
+	new->next = lst[0];
+	lst[0] = new;
+}

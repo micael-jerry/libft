@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   char_libft.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/24 08:34:46 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/03/24 08:39:33 by mfidimal         ###   ########.fr       */
+/*   Created: 2025/03/24 07:50:13 by mfidimal          #+#    #+#             */
+/*   Updated: 2025/03/24 07:58:31 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-#define LIBFT_H
+#ifndef CHAR_LIBFT_H
+#define CHAR_LIBFT_H
 
-#include "char_libft.h"
-#include "list_libft.h"
-#include "memory_libft.h"
-#include "num_libft.h"
-#include "print_libft_.h"
-#include "str_libft.h"
-#include "matrix_libft.h"
+int					ft_isalnum(int c);
+int					ft_isalpha(int c);
+int					ft_isascii(int c);
+int					ft_isdigit(int c);
+int					ft_isprint(int c);
+int					ft_tolower(int c);
+int					ft_toupper(int c);
 
 #endif

@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/24 08:34:46 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/03/24 08:39:33 by mfidimal         ###   ########.fr       */
+/*   Created: 2024/02/20 14:44:22 by mfidimal          #+#    #+#             */
+/*   Updated: 2025/03/24 08:20:38 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-#define LIBFT_H
-
-#include "char_libft.h"
-#include "list_libft.h"
 #include "memory_libft.h"
-#include "num_libft.h"
-#include "print_libft_.h"
-#include "str_libft.h"
-#include "matrix_libft.h"
 
-#endif
+void	*ft_memset(void *pointer, int value, size_t size)
+{
+	char	*pointer_temp;
+	size_t	i;
+
+	pointer_temp = (char *)pointer;
+	i = 0;
+	while (i < size)
+	{
+		pointer_temp[i] = (char)value;
+		i++;
+	}
+	return (pointer);
+}

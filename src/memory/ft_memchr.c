@@ -1,24 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/24 08:34:46 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/03/24 08:39:33 by mfidimal         ###   ########.fr       */
+/*   Created: 2024/02/21 14:12:06 by mfidimal          #+#    #+#             */
+/*   Updated: 2025/03/24 08:20:26 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-#define LIBFT_H
-
-#include "char_libft.h"
-#include "list_libft.h"
 #include "memory_libft.h"
-#include "num_libft.h"
-#include "print_libft_.h"
-#include "str_libft.h"
-#include "matrix_libft.h"
 
-#endif
+void	*ft_memchr(const void *mem_block, int chr, size_t size)
+{
+	char	*mem_block_trans;
+	size_t	i;
+
+	mem_block_trans = (char *)mem_block;
+	i = 0;
+	while (i < size)
+	{
+		if ((int)mem_block_trans[i] == chr)
+			return ((void *)&mem_block_trans[i]);
+		i++;
+	}
+	return (NULL);
+}

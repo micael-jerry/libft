@@ -1,24 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/24 08:34:46 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/03/24 08:39:33 by mfidimal         ###   ########.fr       */
+/*   Created: 2024/02/24 17:37:13 by mfidimal          #+#    #+#             */
+/*   Updated: 2025/03/24 08:28:45 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-#define LIBFT_H
-
-#include "char_libft.h"
-#include "list_libft.h"
-#include "memory_libft.h"
-#include "num_libft.h"
 #include "print_libft_.h"
-#include "str_libft.h"
-#include "matrix_libft.h"
 
-#endif
+static void	ft_putnbr_min_value_fd(int fd)
+{
+	ft_putstr_fd("-2147483648", fd);
+}
+
+void	ft_putnbr_fd(int n, int fd)
+{
+	int	nb;
+
+	if (n == INT_MIN)
+	{
+		ft_putnbr_min_value_fd(fd);
+		return ;
+	}
+	if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		nb = -n;
+	}
+	else
+		nb = n;
+	if (nb > 9)
+	{
+		ft_putnbr_fd(nb / 10, fd);
+		nb = nb % 10;
+	}
+	ft_putchar_fd(nb + '0', fd);
+}

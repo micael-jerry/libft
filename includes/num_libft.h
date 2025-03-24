@@ -1,24 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   num_libft.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/24 08:34:46 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/03/24 08:39:33 by mfidimal         ###   ########.fr       */
+/*   Created: 2025/03/24 08:21:32 by mfidimal          #+#    #+#             */
+/*   Updated: 2025/03/24 08:33:57 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-#define LIBFT_H
 
-#include "char_libft.h"
-#include "list_libft.h"
-#include "memory_libft.h"
-#include "num_libft.h"
-#include "print_libft_.h"
+#ifndef NUM_LIBFT_H
+#define NUM_LIBFT_H
+
+#include <stdlib.h>
+#include <limits.h>
+
 #include "str_libft.h"
-#include "matrix_libft.h"
+
+typedef struct s_ft_itoa_int_info
+{
+	size_t			intlen;
+	int				is_positive;
+	int				absolute_value;
+}					t_ft_itoa_int_info;
+
+char				*ft_itoa(int n);
 
 #endif

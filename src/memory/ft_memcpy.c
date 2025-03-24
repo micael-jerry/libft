@@ -1,24 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/24 08:34:46 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/03/24 08:39:33 by mfidimal         ###   ########.fr       */
+/*   Created: 2024/02/20 19:43:07 by mfidimal          #+#    #+#             */
+/*   Updated: 2025/03/24 08:20:31 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-#define LIBFT_H
-
-#include "char_libft.h"
-#include "list_libft.h"
 #include "memory_libft.h"
-#include "num_libft.h"
-#include "print_libft_.h"
-#include "str_libft.h"
-#include "matrix_libft.h"
 
-#endif
+void	*ft_memcpy(void *dest, const void *src, size_t size)
+{
+	unsigned char		*result;
+	const unsigned char	*source;
+	size_t				i;
+
+	result = dest;
+	source = src;
+	i = 0;
+	if (dest == src || !size)
+		return (dest);
+	while (i < size)
+	{
+		result[i] = source[i];
+		i++;
+	}
+	return (dest);
+}
