@@ -11,11 +11,11 @@
 /* ************************************************************************** */
 
 #ifndef MATRIX_LIBFT_H
-#define MATRIX_LIBFT_H
+# define MATRIX_LIBFT_H
 
-#include <stdlib.h>
+# include <stdlib.h>
 
-size_t				ft_matrixsize(void **arr);
-void				ft_matrixfree(void **arr);
+size_t	ft_matrixsize(void **arr);
+void	ft_matrixfree(void **arr);
 
 #endif
