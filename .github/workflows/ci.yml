@@ -23,7 +23,7 @@ jobs:
       run: make
 
     - name: Check Norminette
-      run: bash ./.github/norme_check.sh
+      run: bash ./norme_check.sh
       working-directory: ${{ github.workspace }}
 
     - name: make fclean
