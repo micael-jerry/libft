@@ -18,16 +18,16 @@ OBJ_DIR = ./obj
 OBJS = $(SRCS:.c=.o)
 OBJ_DIR_PART = $(OBJ_DIR)/char $(OBJ_DIR)/list $(OBJ_DIR)/memory $(OBJ_DIR)/num $(OBJ_DIR)/print $(OBJ_DIR)/str $(OBJ_DIR)/matrix $(OBJ_DIR)/binary
 
+all: $(NAME)
+
 $(OBJ_DIR_PART):
 	mkdir -p $(OBJ_DIR_PART)
 
-$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJ_DIR_PART)
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c $(OBJ_DIR_PART)
 	$(CC) $(CFLAGS) -I $(INCLUDES_DIR) -o $@ -c $<
 
 $(NAME): $(addprefix $(OBJ_DIR)/, $(OBJS))
 	ar rc $(NAME) $(addprefix $(OBJ_DIR)/, $(OBJ))
-
-all: $(NAME)
 
 clean:
 	rm -rf $(OBJ_DIR)

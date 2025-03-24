@@ -6,11 +6,11 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/24 18:02:08 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/03/24 08:28:20 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/03/24 09:39:36 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "print_libft_.h"
+#include "print_libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {

@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_libft_.h                                     :+:      :+:    :+:   */
+/*   print_libft.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 08:27:18 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/03/24 08:29:11 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/03/24 09:38:55 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINT_LIBFT_H
-# define PRINT_LIBFT_H
+#ifndef print_libftH
+# define print_libftH
 
 # include <limits.h>
 # include <unistd.h>
