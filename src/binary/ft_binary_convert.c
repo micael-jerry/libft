@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   binary.c                                           :+:      :+:    :+:   */
+/*   ft_binary_convert.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/01 09:50:27 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/02/01 09:51:36 by mfidimal         ###   ########.fr       */
+/*   Created: 2025/03/24 08:50:24 by mfidimal          #+#    #+#             */
+/*   Updated: 2025/03/24 08:53:41 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "binary_libft.h"
 
 char	*char_to_binary_str(unsigned char c)
 {

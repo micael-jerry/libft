@@ -11,19 +11,23 @@ SRCS = \
 	num/ft_itoa.c \
 	print/ft_putchar_fd.c print/ft_putendl_fd.c print/ft_putnbr_fd.c print/ft_putstr_fd.c \
 	str/ft_split.c str/ft_strchr.c str/ft_strdup.c str/ft_striteri.c str/ft_strjoin.c str/ft_strlcat.c str/ft_strlcpy.c str/ft_strlen.c str/ft_strmapi.c str/ft_strncmp.c str/ft_strnstr.c str/ft_strrchr.c str/ft_strtrim.c str/ft_substr.c \
-	matrix/ft_matrixfree.c matrix/ft_matrixsize.c
+	matrix/ft_matrixfree.c matrix/ft_matrixsize.c \
+	binary/ft_binary_convert.c
 
 OBJ_DIR = ./obj
 OBJS = $(SRCS:.c=.o)
+OBJ_DIR_PART = $(OBJ_DIR)/char $(OBJ_DIR)/list $(OBJ_DIR)/memory $(OBJ_DIR)/num $(OBJ_DIR)/print $(OBJ_DIR)/str $(OBJ_DIR)/matrix $(OBJ_DIR)/binary
 
-all: $(NAME)
+$(OBJ_DIR_PART):
+	mkdir -p $(OBJ_DIR_PART)
 
-$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
-	mkdir -p $(OBJ_DIR)/char $(OBJ_DIR)/list $(OBJ_DIR)/memory $(OBJ_DIR)/num $(OBJ_DIR)/print $(OBJ_DIR)/str $(OBJ_DIR)/matrix
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJ_DIR_PART)
 	$(CC) $(CFLAGS) -I $(INCLUDES_DIR) -o $@ -c $<
 
 $(NAME): $(addprefix $(OBJ_DIR)/, $(OBJS))
 	ar rc $(NAME) $(addprefix $(OBJ_DIR)/, $(OBJ))
+
+all: $(NAME)
 
 clean:
 	rm -rf $(OBJ_DIR)
