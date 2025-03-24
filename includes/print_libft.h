@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef print_libftH
-# define print_libftH
+#ifndef PRINT_LIBFT_H
+# define PRINT_LIBFT_H
 
 # include <limits.h>
 # include <unistd.h>
