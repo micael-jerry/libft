@@ -1,4 +1,4 @@
-name: C/C++ CI
+name: LIBFT CI
 
 on:
   push:
@@ -13,7 +13,18 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+
+    - name: Install dependecies
+      run: |
+        sudo apt update
+        sudo apt install -y python3 python3-venv
+
     - name: make
       run: make
+
+    - name: Check Norminette
+      run: bash ./.github/norme_check.sh
+      working-directory: ${{ github.workspace }}
+
     - name: make fclean
       run: make fclean
