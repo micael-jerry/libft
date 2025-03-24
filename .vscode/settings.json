@@ -1,0 +1,6 @@
+{
+  "files.associations": {
+    "list_libft.h": "c",
+    "num_libft.h": "c"
+  }
+}
