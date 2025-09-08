@@ -2,6 +2,7 @@
   "files.associations": {
     "list_libft.h": "c",
     "num_libft.h": "c",
-    "libft.h": "c"
+    "libft.h": "c",
+    "matrix_libft.h": "c"
   }
 }

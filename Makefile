@@ -11,7 +11,7 @@ SRCS = \
 	num/ft_itoa.c \
 	print/ft_putchar_fd.c print/ft_putendl_fd.c print/ft_putnbr_fd.c print/ft_putstr_fd.c \
 	str/ft_split.c str/ft_strchr.c str/ft_strdup.c str/ft_striteri.c str/ft_strjoin.c str/ft_strlcat.c str/ft_strlcpy.c str/ft_strlen.c str/ft_strmapi.c str/ft_strncmp.c str/ft_strnstr.c str/ft_strrchr.c str/ft_strtrim.c str/ft_substr.c \
-	matrix/ft_matrixfree.c matrix/ft_matrixsize.c \
+	matrix/ft_matrixfree.c matrix/ft_matrixsize.c matrix/ft_matrixpush.c \
 	binary/ft_binary_convert.c
 
 OBJ_DIR = ./obj
