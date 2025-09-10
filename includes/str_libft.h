@@ -1,14 +1,14 @@
-/******************************************************************************/
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   str_libft.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/24 08:29:46 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/09/10 07:08:07 by mfidimal         ###   ########.fr       */
+/*   Created: 2025/09/10 21:05:44 by mfidimal          #+#    #+#             */
+/*   Updated: 2025/09/10 21:06:42 by mfidimal         ###   ########.fr       */
 /*                                                                            */
-/******************************************************************************/
+/* ************************************************************************** */
 
 #ifndef STR_LIBFT_H
 # define STR_LIBFT_H
@@ -35,7 +35,8 @@ char		*ft_strjoin(char const *s1, char const *s2);
 char		*ft_strtrim(char const *s1, char const *set);
 
 /**
- * Splits a string into an array of substrings using a given separator character.
+ * Splits a string into an array of substrings 
+ * using a given separator character.
  *
  * This function allocates and returns a NULL-terminated array of strings,
  * where each string is a word (substring) from the original string `str`
