@@ -1,4 +1,4 @@
-/* ************************************************************************** */
+/******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   str_libft.h                                        :+:      :+:    :+:   */
@@ -6,9 +6,9 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 08:29:46 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/03/24 08:34:31 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/09/10 07:08:07 by mfidimal         ###   ########.fr       */
 /*                                                                            */
-/* ************************************************************************** */
+/******************************************************************************/
 
 #ifndef STR_LIBFT_H
 # define STR_LIBFT_H
@@ -33,6 +33,26 @@ char		*ft_strdup(const char *str);
 char		*ft_substr(char const *s, unsigned int start, size_t len);
 char		*ft_strjoin(char const *s1, char const *s2);
 char		*ft_strtrim(char const *s1, char const *set);
+
+/**
+ * Splits a string into an array of substrings using a given separator character.
+ *
+ * This function allocates and returns a NULL-terminated array of strings,
+ * where each string is a word (substring) from the original string `str`
+ * separated by the character `sep`.
+ *
+ * Consecutive separators are ignored, meaning empty strings are not included
+ * in the result. Memory for each substring and the array itself is allocated
+ * dynamically and must be freed by the caller.
+ *
+ * Example:
+ *   ft_split("hello   world 42", ' ')
+ *   => ["hello", "world", "42", NULL]
+ *
+ * @param str The input string to split.
+ * @param sep The separator character.
+ * @return A NULL-terminated array of substrings, or NULL on allocation failure.
+ */
 char		**ft_split(char const *str, char sep);
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void		ft_striteri(char *s, void (*f)(unsigned int, char *));
