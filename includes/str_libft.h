@@ -6,7 +6,7 @@
 /*   By: mfidimal <mfidimal@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/10 21:05:44 by mfidimal          #+#    #+#             */
-/*   Updated: 2025/09/10 21:06:42 by mfidimal         ###   ########.fr       */
+/*   Updated: 2025/09/18 11:41:34 by mfidimal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char		*ft_strjoin(char const *s1, char const *s2);
 char		*ft_strtrim(char const *s1, char const *set);
 
 /**
- * Splits a string into an array of substrings 
+ * Splits a string into an array of substrings
  * using a given separator character.
  *
  * This function allocates and returns a NULL-terminated array of strings,
@@ -57,5 +57,11 @@ char		*ft_strtrim(char const *s1, char const *set);
 char		**ft_split(char const *str, char sep);
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void		ft_striteri(char *s, void (*f)(unsigned int, char *));
+
+/**
+ * Check if all characters in a string are the same as 'c'.
+ * Returns 1 if true, 0 otherwise.
+ */
+int			ft_strevery(char *str, char c);
 
 #endif
